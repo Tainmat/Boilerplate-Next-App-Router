@@ -1,7 +1,9 @@
+import * as S from './Main.styles'
+
 export function Main() {
   return (
-    <div>
+    <S.Wrapper>
       <h1>Hello World</h1>
-    </div>
+    </S.Wrapper>
   )
 }
