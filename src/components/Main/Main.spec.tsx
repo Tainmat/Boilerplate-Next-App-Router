@@ -5,19 +5,19 @@ import { Main } from '.'
 describe('<Main />', () => {
   it('should render the heading', () => {
     // renderiza o componente
-    const { container } = render(<Main />)
+    const { container } = render(
+      <Main description="React Avançado" title="teste" />
+    )
 
     // busca o elemento e verifica a existência dele
-    expect(
-      screen.getByRole('heading', { name: /hello world/i })
-    ).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /React/i })).toBeInTheDocument()
 
     // gerar snapshot
     expect(container.firstChild).toMatchSnapshot()
   })
 
   it('should render the colors correctly', () => {
-    const { container } = render(<Main />)
+    const { container } = render(<Main description="teste" title="teste" />)
 
     expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' })
   })
