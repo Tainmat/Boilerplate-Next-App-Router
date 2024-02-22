@@ -10,7 +10,9 @@ describe('<Main />', () => {
     )
 
     // busca o elemento e verifica a existência dele
-    expect(screen.getByRole('heading', { name: /React/i })).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /React Avançado/i })
+    ).toBeInTheDocument()
 
     // gerar snapshot
     expect(container.firstChild).toMatchSnapshot()
