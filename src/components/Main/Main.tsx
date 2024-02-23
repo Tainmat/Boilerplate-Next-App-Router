@@ -5,10 +5,7 @@ interface Props {
   description: string
 }
 
-export function Main({
-  title = 'React Avançado',
-  description = 'TypeScript, ReactJS, NextJS e Styled Components'
-}: Props) {
+export function Main({ title, description }: Props) {
   return (
     <S.Wrapper>
       <S.Logo
